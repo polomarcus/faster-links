@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "fasterLinks",
+    "description": "Le nom de l'application"
+  },
+  "appDescription": {
+    "message": "Adieu les URLs raccourcies! ",
+    "description": "La description de l'application"
+  }
+}
