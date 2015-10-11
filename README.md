@@ -1,7 +1,16 @@
 # Faster links - Chrome extension
-Short URLs are a cool way to respect the *140 characters limit* on *witter* for example, but they *bring several issues* with them :
-* Performance : due to redirections, we can *lose several seconds before landing* to our page
-* Security : We cannot see the real links directly, can the website be *trust*? Is it *reliable*? 
+
+For all you short URLs haters!
+
+Twitter redirects every URLs to t.co in order to track clicks, OK cool, why not, but it makes us waste some precious seconds of our life everytime we click on a link on Twitter.
+To counter that, this extension removes all links with a t.co redirect with their real URLs, and also display the full address on the tweet because who gives a f. to the 140 chars limit on Tweeter?
+
+TL,DR : Remove all redirect URLs using t.co with the real URLs to save your time. 
+
+## Without Faster links
+![alt tag](https://raw.githubusercontent.com/polomarcus/faster-links/master/app/images/TweetWithoutFasterLink.png)
+## With Faster links
+![alt tag](https://raw.githubusercontent.com/polomarcus/faster-links/master/app/images/TweetWithFasterLink.png)
 
 ## Download
 Chrome webstore link : https://chrome.google.com/webstore/detail/ojggkiabpbjlckhpaphgdhhojgcpimah/publish-accepted
