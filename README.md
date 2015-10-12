@@ -1,4 +1,4 @@
-# Faster links - Chrome extension
+# Faster links - Chrome extension ![CodeShip status](https://codeship.com/projects/4e9da340-5350-0133-0aa6-76919038d6b2/status?branch=master)
 
 For all you short URLs haters!
 
