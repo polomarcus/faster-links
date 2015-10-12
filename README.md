@@ -3,7 +3,7 @@
 For all you short URLs haters!
 
 Twitter **redirects every URLs to t.co** in order to track clicks, OK cool, why not, but it makes us *waste some precious seconds* of our life everytime we click on a link on Twitter.
-To counter that, this extension **replaces all links with a t.co redirect** with their **real URLs**, and also **display the full URL** on the tweet because who gives a f. about the 140 chars limit on Tweeter?
+To counter that, this extension **replaces all links with a t.co redirect** with their **real URLs**, and also **display the full URL** on the tweet because **who gives a f. about the 140 chars limit** on Tweeter?
 
 **TL,DR** : Remove all redirect URLs using t.co with the real URLs to save your time. 
 
