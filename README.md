@@ -2,10 +2,10 @@
 
 For all you short URLs haters!
 
-Twitter redirects every URLs to t.co in order to track clicks, OK cool, why not, but it makes us waste some precious seconds of our life everytime we click on a link on Twitter.
-To counter that, this extension removes all links with a t.co redirect with their real URLs, and also display the full address on the tweet because who gives a f. to the 140 chars limit on Tweeter?
+Twitter **redirects every URLs to t.co** in order to track clicks, OK cool, why not, but it makes us *waste some precious seconds* of our life everytime we click on a link on Twitter.
+To counter that, this extension **replaces all links with a t.co redirect** with their **real URLs**, and also **display the full URL** on the tweet because who gives a f. about the 140 chars limit on Tweeter?
 
-TL,DR : Remove all redirect URLs using t.co with the real URLs to save your time. 
+**TL,DR** : Remove all redirect URLs using t.co with the real URLs to save your time. 
 
 ## Without Faster links
 ![alt tag](https://raw.githubusercontent.com/polomarcus/faster-links/master/app/images/TweetWithoutFasterLink.png)
@@ -13,7 +13,7 @@ TL,DR : Remove all redirect URLs using t.co with the real URLs to save your time
 ![alt tag](https://raw.githubusercontent.com/polomarcus/faster-links/master/app/images/TweetWithFasterLink.png)
 
 ## Download
-Chrome webstore link : https://chrome.google.com/webstore/detail/ojggkiabpbjlckhpaphgdhhojgcpimah/publish-accepted
+Chrome webstore link : https://chrome.google.com/webstore/detail/ojggkiabpbjlckhpaphgdhhojgcpimah
 
 ## Develop 
 Most of information can be found here : https://github.com/yeoman/generator-chrome-extension
