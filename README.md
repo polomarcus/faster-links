@@ -13,7 +13,7 @@ To counter that, this extension **replaces all links with a t.co redirect** with
 ![alt tag](https://raw.githubusercontent.com/polomarcus/faster-links/master/app/images/TweetWithFasterLink.png)
 
 ## Download
-Chrome webstore link : https://chrome.google.com/webstore/detail/ojggkiabpbjlckhpaphgdhhojgcpimah/publish-accepted
+Chrome webstore link : https://chrome.google.com/webstore/detail/ojggkiabpbjlckhpaphgdhhojgcpimah
 
 ## Develop 
 Most of information can be found here : https://github.com/yeoman/generator-chrome-extension
