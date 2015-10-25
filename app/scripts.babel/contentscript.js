@@ -28,11 +28,23 @@ function tCoUrls(){
     }
 }
 
+/**
+ *  get bio links from twitter profiles, remove their t.co href in <a>
+ **/
+function toCoBioURL(){
+    var bioLink = document.querySelector('.ProfileHeaderCard-urlText a');
+    if(bioLink){
+      var fullURL = bioLink.getAttribute('title');
+      bioLink.setAttribute('href', fullURL);
+    }
+}
+
 var hostname = window.location.hostname;
 
 switch (hostname) {
   case 'twitter.com':
     tCoUrls();
+    toCoBioURL();
     setInterval(tCoUrls, 3000); //SetInterval is used for infinite scroll on twitter
 
     break;
