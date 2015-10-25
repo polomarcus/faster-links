@@ -327,8 +327,8 @@ module.exports = function (grunt) {
         ],
         createTag: true,
         tagName: 'v%VERSION%',
-        tagMessage: 'Version %VERSION% --skip-ci',
-        push: false,
+        tagMessage: 'Version %VERSION%',
+        push: true,
         pushTo: 'origin'
       }
     }
@@ -361,7 +361,8 @@ module.exports = function (grunt) {
     'uglify',
     'copy',
     'usemin',
-    'compress'
+    'compress',
+    'bump',
   ]);
 
   grunt.registerTask('default', [
