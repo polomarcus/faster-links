@@ -21,6 +21,8 @@
     "chrome": true,
     "assert": true,
     "hostname": true,
+    "tCoUrls": true,
+    "toCoBioURL": true,
     "removeProtocol": true,
     "crypto": true
   }

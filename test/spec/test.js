@@ -15,7 +15,7 @@
      var profileURL = document.querySelector('.ProfileHeaderCard-urlText a');
      assert.equal(profileURL.getAttribute('href'), 'http://t.co/jJkLxp36yI');
 
-     toCoBioURL()
+     toCoBioURL();
 
      profileURL = document.querySelector('.ProfileHeaderCard-urlText a');
      assert.equal(profileURL.getAttribute('href'), 'http://www.wake-me-up.co');

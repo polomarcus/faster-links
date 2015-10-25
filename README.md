@@ -16,19 +16,25 @@ To counter that, this extension **replaces all links with a t.co redirect** with
 Chrome webstore link : https://chrome.google.com/webstore/detail/ojggkiabpbjlckhpaphgdhhojgcpimah
 
 ## Develop 
+```
+grunt watch
+```
+
+Code here : https://github.com/polomarcus/faster-links/tree/master/app/scripts.babel
+
 Most of information can be found here : https://github.com/yeoman/generator-chrome-extension
 
 ## Tests
 All tests are located here : test/spec/test.js and use http://mochajs.org/
  
-To execute them :
+Execute them :
 ```
 grunt test
 ```
 
 ## What's next ?
 Right now, this extension only makes Twitter faster (t.co URLs).
-It would be cool to add these APIs:
+It would be cool to add these APIs for other websites :
 * https://bitly.com/
 * http://unshorten.it/api
 

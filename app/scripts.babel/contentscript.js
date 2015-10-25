@@ -4,7 +4,6 @@
  * @TODO bit.ly
  **/
 
-
 /**
  * remove http(s) and www from a URL
  **/
@@ -44,8 +43,9 @@ var hostname = window.location.hostname;
 switch (hostname) {
   case 'twitter.com':
     tCoUrls();
-    toCoBioURL();
     setInterval(tCoUrls, 3000); //SetInterval is used for infinite scroll on twitter
+
+    toCoBioURL();
 
     break;
   default:
