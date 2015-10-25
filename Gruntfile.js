@@ -9,6 +9,8 @@
 
 module.exports = function (grunt) {
 
+  grunt.loadNpmTasks('grunt-bump');
+
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
 
@@ -310,6 +312,24 @@ module.exports = function (grunt) {
           src: ['**/*'],
           dest: ''
         }]
+      }
+    },
+
+    bump: {
+      options: {
+        files: [
+          "bower.json"
+        ],
+        commit: true,
+        commitMessage: 'release(*): v%VERSION% --skip-ci', //CodeShip --skip-ci to skip the build
+        commitFiles: [
+          "bower.json"
+        ],
+        createTag: true,
+        tagName: 'v%VERSION%',
+        tagMessage: 'Version %VERSION% --skip-ci',
+        push: false,
+        pushTo: 'origin'
       }
     }
   });
