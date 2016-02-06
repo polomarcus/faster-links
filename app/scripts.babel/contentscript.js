@@ -6,7 +6,7 @@
 //@TODO create HTMLService APIService
 
 //Used to mark already done HTML a tags
-var fasterLinksClass = 'fasterLinks';
+var fasterLinksClass = 'fasterLinksDone';
 
 function addClass(el, className) {
   if (el.classList) {
@@ -52,14 +52,20 @@ function changeNodeView(element, fullURL) {
   element.innerHTML = removeProtocol(fullURL);
 }
 
+function isAPIReponseValid(apiCode) {
+  return apiCode === '301';
+}
 
 function manageAPIResponse(element, apiReponse) {
-  var apiURL =  parseAPIResponse(apiReponse);
-  var realURL= cleanAPIURL(apiURL[1]);
+  var apiReponseParsed =  parseAPIResponse(apiReponse);
+  var apiURL = apiReponseParsed[1];
+  var apiCode = apiReponseParsed[0];
+  if(isAPIReponseValid(apiCode)) {
+    var realURL= cleanAPIURL(apiURL);
+    realURL = replaceBackSlash(realURL);
+    changeNodeView(element,realURL);
+  }
 
-  realURL = replaceBackSlash(realURL);
-
-  changeNodeView(element,realURL);
 }
 
 function ajaxQuery(element, shortURL) {
@@ -80,9 +86,6 @@ function ajaxQuery(element, shortURL) {
 //http://linkpeelr.appspot.com/api?action=peel_all&url=http://bit.ly/1MbRrLt&where=twitter.com&version=2.0.3
 //Preview 1 to get the URL
 function shortURLGetter(element, shortURL){
-  console.log('element', element);
-  console.log('shortURL', shortURL);
-
   addClass(element, fasterLinksClass);
   ajaxQuery(element, shortURL);
 }
@@ -119,15 +122,27 @@ function isURL(url){
   return url !== '' && url !== null && (url.indexOf('http') !== -1 || url.indexOf('www')  !== -1);
 }
 
-function getallATags(){
-  var aTags = document.querySelectorAll('.TweetTextSize a:not(.' + fasterLinksClass + ')');
+/**
+ * class containing short url
+ * @param websiteName
+ * @returns {*}
+ */
+function getClassNameLinkWebsite(websiteName) {
+  switch (websiteName) {
+    case 'twitter':
+      return '.TweetTextSize';
+    default :
+      return 'ONLY TWITTER RIGHT NOW';
+  }
+}
+
+function getallATags(websiteName){
+  var aTags = document.querySelectorAll(getClassNameLinkWebsite(websiteName) + ' a:not(.' + fasterLinksClass + ')');
   for(var i = 0; i < aTags.length; i++) {
     var url = aTags[i].getAttribute('href');
 
     if(isURL(url)){
-      if(!url.match('t.co')) {
-        shortURLGetter(aTags[i], url);
-      }
+      shortURLGetter(aTags[i], url);
     }
   }
 }
@@ -137,7 +152,7 @@ var hostname = window.location.hostname;
 switch (hostname) {
   case 'twitter.com':
     tCoUrls();
-    getallATags();
+    getallATags('twitter');
 
     toCoBioURL(); //only once
 
@@ -146,7 +161,8 @@ switch (hostname) {
 
     break;
   default:
-    getallATags();
-    setInterval(getallATags, 3000); //SetInterval is used for infinite scroll
+    //Only for twitter right now, otherwise we would do :
+    // getallATags('some_other_website');
+    // setInterval(getallATags, 3000); //SetInterval is used for infinite scroll on twitter
     break;
 }

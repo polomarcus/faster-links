@@ -10,6 +10,11 @@
         assert.equal(arrayToTest[1], 'test2');
     });
 
+    it('should tell if  API response is valid', function() {
+      assert.equal(isAPIReponseValid('301'), true);
+      assert.equal(isAPIReponseValid('302'), false);
+    });
+
     it('should remove " from API response URL', function() {
       var apiResponseURL = '"http://test.com"';
 
