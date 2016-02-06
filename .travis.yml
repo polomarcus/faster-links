@@ -1,0 +1,12 @@
+language: node_js
+
+node_js:
+  - "4.1"
+
+before_script:
+  - npm install
+  - npm ins tall -g grunt-cli
+  - npm install -g bower
+  - bower install
+  - grunt
+script: grunt test
