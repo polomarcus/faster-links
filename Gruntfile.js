@@ -134,8 +134,7 @@ module.exports = function (grunt) {
       all: [
         'Gruntfile.js',
         '<%= config.srcScript %>/{,*/}*.js',
-        '!<%= config.app %>/scripts/vendor/*',
-        'test/spec/{,*/}*.js'
+        '!<%= config.app %>/scripts/vendor/*'
       ]
     },
     mocha: {
@@ -318,12 +317,12 @@ module.exports = function (grunt) {
     bump: {
       options: {
         files: [
-          "bower.json"
+          'bower.json'
         ],
         commit: true,
         commitMessage: 'release(*): v%VERSION% --skip-ci', //CodeShip --skip-ci to skip the build
         commitFiles: [
-          "bower.json"
+          'bower.json'
         ],
         createTag: true,
         tagName: 'v%VERSION%',
@@ -361,8 +360,8 @@ module.exports = function (grunt) {
     'uglify',
     'copy',
     'usemin',
-    'compress',
-    'bump',
+    'compress'
+    //'bump'
   ]);
 
   grunt.registerTask('default', [
