@@ -7,6 +7,7 @@ To counter that, this extension **replaces all links with a t.co redirect** with
 
 **TL,DR** : Remove all redirect URLs using t.co with the real URLs to save your time. 
 
+
 ## Without Faster links
 ![alt tag](https://raw.githubusercontent.com/polomarcus/faster-links/master/app/images/TweetWithoutFasterLink.png)
 ## With Faster links
@@ -37,6 +38,9 @@ Right now, this extension only makes Twitter faster (t.co URLs).
 It would be cool to add these APIs for other websites :
 * https://bitly.com/
 * http://unshorten.it/api
+
+## Credit
+LinksPeelr API : https://github.com/ibagrak/linkpeelr
 
 ### Copyright
 GNU GENERAL PUBLIC LICENSE
