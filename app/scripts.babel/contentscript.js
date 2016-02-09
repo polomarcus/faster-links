@@ -137,7 +137,7 @@ function getClassNameLinkWebsite(websiteName) {
 }
 
 function getallATags(websiteName){
-  var aTags = document.querySelectorAll(getClassNameLinkWebsite(websiteName) + ' a:not(.' + fasterLinksClass + ')');
+  var aTags = document.querySelectorAll(getClassNameLinkWebsite(websiteName) + ' a.twitter-timeline-link:not(.' + fasterLinksClass + ')');
   for(var i = 0; i < aTags.length; i++) {
     var url = aTags[i].getAttribute('href');
 
@@ -151,14 +151,14 @@ var hostname = window.location.hostname;
 
 switch (hostname) {
   case 'twitter.com':
+    var domainNameTwitter = 'twitter';
     tCoUrls();
-    getallATags('twitter');
+    getallATags(domainNameTwitter);
 
     toCoBioURL(); //only once
 
     setInterval(tCoUrls, 3000); //SetInterval is used for infinite scroll on twitter
-    setInterval(getallATags, 3000); //SetInterval is used for infinite scroll on twitter
-
+    setInterval(getallATags, 3000, domainNameTwitter); //SetInterval is used for infinite scroll on twitter
     break;
   default:
     //Only for twitter right now, otherwise we would do :
