@@ -3,10 +3,8 @@ language: node_js
 node_js:
   - "4.1"
 
-before_install:
-  - pip install codecov
 after_success:
-  - codecov
+  - ./node_modules/.bin/codecov .
 
 before_script:
   - npm install
