@@ -1,4 +1,5 @@
-# Faster links - Chrome extension ![CodeShip status](https://codeship.com/projects/4e9da340-5350-0133-0aa6-76919038d6b2/status?branch=master) [![Build Status](https://travis-ci.org/polomarcus/faster-links.svg?branch=master)](https://travis-ci.org/polomarcus/faster-links)
+# Faster links - Chrome extension 
+![CodeShip status](https://codeship.com/projects/4e9da340-5350-0133-0aa6-76919038d6b2/status?branch=master) [![Build Status](https://travis-ci.org/polomarcus/faster-links.svg?branch=master)](https://travis-ci.org/polomarcus/faster-links) [![codecov.io](https://codecov.io/github/polomarcus/faster-links/coverage.svg?branch=master)](https://codecov.io/github/polomarcus/faster-links?branch=master)
 
 For all you short URLs haters!
 
