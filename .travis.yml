@@ -3,9 +3,6 @@ language: node_js
 node_js:
   - "4.1"
 
-after_success:
-  - ./node_modules/.bin/codecov .
-
 before_script:
   - npm install
   - npm install -g grunt-cli
@@ -14,4 +11,6 @@ before_script:
   - bower install
 script:
   - grunt test
+
+after_success:
   - codecov
