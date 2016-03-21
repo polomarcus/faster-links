@@ -1,6 +1,7 @@
 # Faster links - Chrome extension 
 ![CodeShip status](https://codeship.com/projects/4e9da340-5350-0133-0aa6-76919038d6b2/status?branch=master) [![Build Status](https://travis-ci.org/polomarcus/faster-links.svg?branch=master)](https://travis-ci.org/polomarcus/faster-links) [![codecov.io](https://codecov.io/github/polomarcus/faster-links/coverage.svg?branch=master)](https://codecov.io/github/polomarcus/faster-links?branch=master)
-
+## Download
+Chrome webstore link : https://chrome.google.com/webstore/detail/ojggkiabpbjlckhpaphgdhhojgcpimah
 ## For all you shortened URLs haters!
 
 **TL,DR** : Remove all shortened URLs with the real URLs to **save precious seconds** and finally know **where we click.**
@@ -15,9 +16,6 @@ To counter that, this extension **replaces all links with a t.co redirect** and 
 ![alt tag](https://raw.githubusercontent.com/polomarcus/faster-links/master/app/images/TweetWithoutFasterLink.png)
 ## With Faster links
 ![alt tag](https://raw.githubusercontent.com/polomarcus/faster-links/master/app/images/TweetWithFasterLink.png)
-
-## Download
-Chrome webstore link : https://chrome.google.com/webstore/detail/ojggkiabpbjlckhpaphgdhhojgcpimah
 
 ## Develop 
 ```
