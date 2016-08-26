@@ -8,6 +8,18 @@
 //Used to mark already done HTML a tags
 var fasterLinksClass = 'fasterLinksDone';
 
+/**
+ * I avoid commenting this method, thank you :D
+ */
+function removeUTMs(url){
+  if(url.indexOf('utm') !== -1) {
+    return url.replace(/[?&]utm_.*/,'');
+  } else {
+    return url;
+  }
+}
+
+
 function addClass(el, className) {
   if (el.classList) {
     el.classList.add(className);
@@ -46,10 +58,11 @@ function cleanAPIURL(APIurl) {
   return APIurl.replace(new RegExp('"', 'g'), '');
 }
 
-
 function changeNodeView(element, fullURL) {
-  element.setAttribute('href', fullURL);
-  element.innerHTML = removeProtocol(fullURL);
+  var urlWithOut = removeUTMs(fullURL);
+
+  element.setAttribute('href', urlWithOut);
+  element.innerHTML = removeProtocol(urlWithOut);
 }
 
 function isAPIReponseValid(apiCode) {
@@ -161,6 +174,7 @@ switch (hostname) {
     setInterval(getallATags, 3000, domainNameTwitter); //SetInterval is used for infinite scroll on twitter
     break;
   default:
+
     //Only for twitter right now, otherwise we would do :
     // getallATags('some_other_website');
     // setInterval(getallATags, 3000); //SetInterval is used for infinite scroll on twitter

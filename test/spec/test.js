@@ -20,7 +20,18 @@
 
       assert.equal(cleanAPIURL(apiResponseURL), 'http://test.com');
     });
+
+
   });
+
+  describe('UTM tests', function () {
+      it('should remove UTM', function () {
+      var urlWithUTMs = 'go.databricks.com/spark-mllib-from-quick-start-to-scikit-learn?utm_campaign=Machine Learning&utm_content=38676669&utm_medium=social&utm_source=twitter';
+      var urlWithoutUTMs = 'go.databricks.com/spark-mllib-from-quick-start-to-scikit-learn';
+
+        assert.equal(removeUTMs(urlWithUTMs), urlWithoutUTMs);
+      });
+  })
 
   describe('Tweeter tests', function () {
     it('should have a hostname variable', function () {
