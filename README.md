@@ -6,7 +6,8 @@ Chrome webstore link : https://chrome.google.com/webstore/detail/ojggkiabpbjlckh
 
 **TL,DR** : 
 
-Remove all shortened URLs with the real URLs to **save precious seconds** and finally know **where we click.** for [Twitter](http://twitter.com/) and [TweetDeck](https://tweetdeck.twitter.com)
+Replaces **all shortened URLs** with the **real URLs without [UTM](https://en.wikipedia.org/wiki/UTM_parameters)** to **save precious seconds** and finally know **where we click** without **being tracked**.
+Only for [Twitter](http://twitter.com/) and [TweetDeck](https://tweetdeck.twitter.com)
 
 
 
