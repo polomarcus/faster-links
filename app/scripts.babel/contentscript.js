@@ -138,19 +138,35 @@ function isURL(url){
 /**
  * class containing short url
  * @param websiteName
- * @returns {*}
+ <p class="x"><a class="y"></a></p>
  */
 function getClassNameLinkWebsite(websiteName) {
   switch (websiteName) {
-    case 'twitter':
-      return '.TweetTextSize';
-    default :
+    case 'twitter.com':
+      return '.js-tweet-text';
+    case 'tweetdeck.twitter.com':
+      return '.js-tweet-text';
+    default:
+      return 'ONLY TWITTER RIGHT NOW';
+  }
+}
+
+/**
+ get class value for <a class="X">
+ */
+function getClassNameInsteadATag(websiteName) {
+  switch (websiteName) {
+    case 'tweetdeck.twitter.com':
+      return 'url-ext';
+    case 'twitter.com':
+      return 'twitter-timeline-link';
+    default:
       return 'ONLY TWITTER RIGHT NOW';
   }
 }
 
 function getallATags(websiteName){
-  var aTags = document.querySelectorAll(getClassNameLinkWebsite(websiteName) + ' a.twitter-timeline-link:not(.' + fasterLinksClass + ')');
+  var aTags = document.querySelectorAll(getClassNameLinkWebsite(websiteName) + ' a.' + getClassNameInsteadATag(websiteName) + ':not(.' + fasterLinksClass + ')');
   for(var i = 0; i < aTags.length; i++) {
     var url = aTags[i].getAttribute('href');
 
@@ -164,14 +180,22 @@ var hostname = window.location.hostname;
 
 switch (hostname) {
   case 'twitter.com':
-    var domainNameTwitter = 'twitter';
     tCoUrls();
-    getallATags(domainNameTwitter);
+    getallATags(hostname);
 
     toCoBioURL(); //only once
 
     setInterval(tCoUrls, 3000); //SetInterval is used for infinite scroll on twitter
-    setInterval(getallATags, 3000, domainNameTwitter); //SetInterval is used for infinite scroll on twitter
+    setInterval(getallATags, 3000, hostname); //SetInterval is used for infinite scroll on twitter
+    break;
+  case 'tweetdeck.twitter.com':
+    tCoUrls();
+    getallATags(hostname);
+
+    toCoBioURL(); //only once
+
+    setInterval(tCoUrls, 3000); //SetInterval is used for infinite scroll on twitter
+    setInterval(getallATags, 3000, hostname); //SetInterval is used for infinite scroll on twitter
     break;
   default:
 
