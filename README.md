@@ -6,7 +6,7 @@ Chrome webstore link : https://chrome.google.com/webstore/detail/ojggkiabpbjlckh
 
 **TL,DR** : 
 
-Replaces **all shortened URLs** with the **real URLs without [UTM](https://en.wikipedia.org/wiki/UTM_parameters)** to **save precious seconds** and finally know **where we click** without **being tracked**.
+Replaces **all shortened URLs** with **real URLs without [UTM](https://en.wikipedia.org/wiki/UTM_parameters)** to **save precious seconds** and finally know **where we click** without **being tracked**.
 Only for [Twitter](http://twitter.com/) and [TweetDeck](https://tweetdeck.twitter.com)
 
 
@@ -18,9 +18,19 @@ To counter that, this extension **replaces all links with a t.co redirect** and 
 
 
 ## Without Faster links
+### Long link
 ![alt tag](https://raw.githubusercontent.com/polomarcus/faster-links/master/app/images/TweetWithoutFasterLink.png)
+
+### Short URL
+![shorturl](https://cloud.githubusercontent.com/assets/4059615/18139444/cf8b0fa0-6fb1-11e6-9431-0b130ab4ae45.png)
+
 ## With Faster links
+
+### Long link
 ![alt tag](https://raw.githubusercontent.com/polomarcus/faster-links/master/app/images/TweetWithFasterLink.png)
+
+### Short URL
+![realurl](https://cloud.githubusercontent.com/assets/4059615/18139445/cfa25c6e-6fb1-11e6-8f60-dfb6109e0760.png)
 
 ## Develop 
 ```
